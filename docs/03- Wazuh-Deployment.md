@@ -18,7 +18,6 @@ Docker was installed on the Arch Linux host to provide containerized deployment 
 Step 2 - Enable Docker-
 sudo systemctl enable docker
 sudo systemctl start docker
-
 Step 3 - Verify Docker-
 sudo systemctl status docker
 
@@ -74,3 +73,7 @@ Read official documentation carefully.
 Validate Docker installation before deploying containers.
 Check kernel requirements before starting OpenSearch.
 Troubleshooting is an important part of SOC engineering and should be documented.
+
+Issue 5
+VirtualBox Host-Only Adpter Configuration - this is a bit of a tricky one: the host-only interface had a dynamic address instead of a static one, meaning my ip address changed from 192.168.56.1/24 to 192.168.56.101/254, the host leased itself a guest whcih should never happen. This means that the communication i have been trying to establish between the agent and manager has been direly failing.
+Resolution: Fixing the network 
