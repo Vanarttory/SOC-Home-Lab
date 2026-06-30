@@ -1,10 +1,13 @@
 Objective:
+
 Simulate a brute force attack against an SSH server using Hydra, then detect and analyze the attack using Wazuh SIEM.
 
 What is a Brute Force Attack?
+
 It is when an attacker systematically tries every possible password combination till they find the correct one. SSH brute force is one of the most common attacks on the internet-facing linux servers, automated bot scans the entire internet constantly looking for open SSH ports.
 
 Tools Used:
+
 Tool Purpose Machine
 Hydra Password brute forcing tools Kali Linux
 Wazuh Manager SIEM, detecting amd alerting on failed logins Ubuntu Server
