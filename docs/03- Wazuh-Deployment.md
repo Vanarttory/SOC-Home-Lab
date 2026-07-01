@@ -84,4 +84,5 @@ I have spent the past almost 6 hours trying to find what the problem was trying 
                                   Operating System : Ubuntu 24.04.4 LTS
   <img width="1366" height="736" alt="Screenshot From 2026-07-01 11-32-05" src="https://github.com/user-attachments/assets/aab8d8e2-3342-4473-8bd5-0ca22504e485" />
 
-
+During the Kali agent deployment, enrollment failed because the installed agent version (v4.14.5-rc1) was newer than the Wazuh manager (v4.13.0). Wazuh requires the manager version to be equal to or newer than the agent version, so the agent was downgraded to match the manager.
+<img width="1366" height="736" alt="Screenshot From 2026-07-01 14-25-31" src="https://github.com/user-attachments/assets/99feba44-c09c-4277-b59c-5b49007c3835" />
