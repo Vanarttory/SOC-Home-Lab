@@ -77,4 +77,4 @@ This sequence ,DNS lookup followed immediately by a network connection is classi
 
 In a real incident, this would trigger an immediate investigation into what PowerShell was connecting to and why.
 
-Events 6/7 (Driver/Image Load) and Event 10 (ProcessAccess) were configured in Sysmon but did not trigger during basic testing. These events typically appear during more advanced activities such as DLL injection or credential dumping which will be demonstrated in [05-Nmap-and-Metasploit.md](05-Nmap-and-Metsplot.md)
+Events 6/7 (Driver/Image Load) and Event 10 (ProcessAccess) were configured in Sysmon but did not trigger during basic testing. These events typically appear during more advanced activities such as DLL injection or credential dumping which will be demonstrated in [05-Nmap-and-Metasploit.md](05-Nmap-and-Metsploit.md)
