@@ -47,33 +47,41 @@ Expected containers:
 Wazuh Manager
 Wazuh Dashboard
 Wazuh Indexer
-Image Image Step 10 - Access the Dashboard- Open: https://localhost Default credentials: Username: Password:
+Image Image Step 10 - Access the Dashboard- Open: https://localhost Default credentials: Username:admin Password:SecretPassword
+
+I added Windows as an agent and that was very easy, but then i encountered some challenges while adding Ubuntu Server as an agent <img width="1366" height="736" alt="Screenshot From 2026-06-30 14-54-52" src="https://github.com/user-attachments/assets/aff36f5a-f4e0-4883-9874-be0e7efc6d28" />
+
 Troubleshooting
+I have spent the past almost 6 hours trying to find what the problem was trying to register my Ubuntu sever as an agent.
 
-Issue 1
--Incorrect Git Repository
-Resolution : git clone https://github.com/wazuh/wazuh-docker.git
+   The Ubuntu Server remained in an unconnected state even though:
+ 
+   -The service was running
+   -The manager was reachable
+   -The port was open
+  
+ The root causes were:
+                
+  -An incorrect VirtualBox -host-Only adapter IP configuration.
+   -Duplicate registration on Wazuh manager
+  -SStale authentication(client) key on the Ubuntu agent
+  
+   The resolution:
+      -I reconfigures the Host-Only adapter from a guest to a host IP 
+      -Verified connectivity using ping and nc
+      -Removed the duplicate agent from the manager
+      -Deleted the old client keys file from Ubuntu agent
+      -Created a new agent on the manager
+      -Installed the newly generated authentication key on the Ubuntu Vm
+      -Restarted the Wazuh agent
+          
+  Verification:
+    -systemctl status wazuh-agent showed the service running
+    -nc -vz 192.168.#.# confirmed connectivity
+    -Wazuh dashboard dislplayed:
+                                  Status: Active
+                                  IP: 192.168.#.#
+                                  Operating System : Ubuntu 24.04.4 LTS
+  <img width="1366" height="736" alt="Screenshot From 2026-07-01 11-32-05" src="https://github.com/user-attachments/assets/aab8d8e2-3342-4473-8bd5-0ca22504e485" />
 
-Issue 2
--Invalid ZIP Download
-Resolution :Remove the invalid file and cloned the repository correctly.
 
-Issue 3
--Missing Files
-Resolution :Check out the stable v4.13.0 release which included the required deployment files.
-
-Issue 4
-
-Elasticsearch Kernel Requirement
-Resolution: sudo sysctl -w vm.max_map_count=262144
-Lessons Learned: -
-
-Always verify repository URLs before cloning.
-Read official documentation carefully.
-Validate Docker installation before deploying containers.
-Check kernel requirements before starting OpenSearch.
-Troubleshooting is an important part of SOC engineering and should be documented.
-
-Issue 5
-VirtualBox Host-Only Adpter Configuration - this is a bit of a tricky one: the host-only interface had a dynamic address instead of a static one, meaning my ip address changed from 192.168.56.1/24 to 192.168.56.101/254, the host leased itself a guest whcih should never happen. This means that the communication i have been trying to establish between the agent and manager has been direly failing.
-Resolution: Fixing the network 
