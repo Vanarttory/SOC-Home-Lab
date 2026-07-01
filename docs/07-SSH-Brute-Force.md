@@ -38,6 +38,11 @@ SIEM tools like Wazuh detcetd patterns monst humans wouldn't
 A single failed login is noise but 100 failed ones is a signal
 Defenders should implement fail2ban or rate limiting to block brute force automatically
 
-Image Image Image
-As seen there have been some trouble in the Wazuh Agent:disk space and dependency crashes. I fixed it by switching to Wazuh Docker.
+<img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/cfa43845-50f3-4887-b06b-4c4d8e20e0af" />
+<img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/ce3d26d2-8e04-4153-b091-b1554960f714" />
+<img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/410f7e3b-3868-44e9-a91f-718aedd02054" />
+
+
+
+As seen there have been some trouble in the Wazuh Agent:disk space and dependency crashes. How I fixed it by switching to Wazuh Docker as documented in [Project 02 - Wazuh Deployment](Project-02-Wazuh-Deployment.md).
 Having learnt about Virtualization last semester and having to see it in the real world is quite astonishing, Understanding the difference between a Virtual environment and a container, a Virtual environment like Oracle that can run full virtual machines like Windows but containers like Docker can only run individual applications and it cannot simulate the virtual hardware, only shares the hosts underlying operating system kernel.
