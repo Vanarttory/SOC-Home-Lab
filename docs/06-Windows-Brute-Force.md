@@ -66,7 +66,10 @@ MITRE ATTACK MAPPING : T1110 - Brute Force
 Conclusion:
 Windows Security Event ID 4625 successfully recorded and preserved evidence of failed authentication activity. The investigation demonstrates how failed logon attempts can be identified , analyzed and documented using native Windows logging capabilities.
 
-Image Image
+<img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/6e253a8d-d16b-4524-9098-dd21723d8901" />
+<img width="630" height="440" alt="image" src="https://github.com/user-attachments/assets/5c401382-dc4a-4f0d-9240-f66476e54157" />
+
+
 Logon Type Meaning
 2 Interactive (keyboard login at the machine)
 3 Network (SMB, shared folders, remote access)
@@ -236,7 +239,11 @@ Meaning: 5 bad passwords, account is locked for 15 minutes
 Create a test account
 Trigger lockout
 Investigate
-Image Image Image
+<img width="630" height="440" alt="image" src="https://github.com/user-attachments/assets/d628994f-a1d5-4a53-8f0f-486ac40401cc" />
+<img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/e014cde7-5cce-4986-a1f0-64506423e845" />
+<img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/706ec5f1-db02-49e5-a8ce-a41514dea35e" />
+
+
 Evidence Collected:
 Event ID 4740 - Account Lockout
 Timestamp : 1:53:36 PM
@@ -251,5 +258,4 @@ MITRE ATTACK : T1110 - Brute Force
 Conclusion:
 Windows successfully enforced the configured account lockout policy and generated Event ID 4740. This investigation demonstrates how account lockout events can be identified , correlated with failed logon activity and documented as part of brute force detection workflow.
 
-Image
-Victoria | CyberSecurity | Nairobi, Kenya
+<img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/9b21bd07-aad6-49f9-9dc1-fbf5cf9e2e67" />
