@@ -1,5 +1,9 @@
-Image Image
+<img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/efd8cdc5-ee01-4517-ae10-f298d322f1af" />
+<img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/a95d0d75-483c-4095-ad2b-7fbd62ffed48" />
+
+
 Objective:
+
 
 Simulate a real-world attack from Kali Linux against a Windows 10 target machine to understand how attackers exploit vulnerabilities and how defenders detect them.
 
