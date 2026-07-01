@@ -2,38 +2,55 @@
 
 What is is.
 
-It is a Security Operations Center home lab built on a personal machine using Oracle VirtualBox. A SOC is an environment where security analysts monitor, detect and respond to cyber threats in real time. This lab simulates that environment at a small scale.
+It is a Security Operations Center home lab built on a personal machine using Oracle VirtualBox.
+
+A SOC is an environment where security analysts monitor, detect and respond to cyber threats in real time.
+
+This lab simulates that environment at a small scale.
+
+This repository documents my SOC analyst home lab built on Arch Linux using VirtualBox and Docker.
+
+The objective is to simulate realistic attack scenarios, collect telemetry with Wazuh and Sysmon, investigate alerts, and document findings as incident reports.
 
 Why did i build it?
 
 To gain hands-on experience
+
 To practice detection of attacks in real time using industry standard tools.
+
 To build a portfolio demonstrating SOC analyst skills.
+
 To understand how attacker thinks and how defenders respond.
 
 Lab Architecture
 
-┌─────────────────────────────────────────────────────┐
-│               Host Machine (Arch Linux)             │
-│                                                     │
-│  ┌──────────────┐  ┌──────────────┐  ┌───────────┐  │
-│  │ Ubuntu Server│  │Windows Target│  │   Kali    │  │
-│  │192.168.56.10 │  │192.168.56.106│  │192.168.56 │  │
-│  │  Wazuh SIEM  │  │Sysmon+Agent  │  │  .20      │  │
-│  │   Manager    │  │              │  │ Attacker  │  │
-│  └──────┬───────┘  └──────┬───────┘  └─────┬─────┘  │
-│         │                 │                │        │
-│         └─────────────────┴────────────────┘        │
-│                     vboxnet0                        │
-│                 192.168.56.0/24                     │
-└─────────────────────────────────────────────────────┘
+                Internet
+                    |
+             Arch Linux Host
+                    |
+        ┌───────────|────────────┐
+        │                        |
+ Docker (Wazuh)             VirtualBox
+        │                        |
+        │         ┌──────────────|──────────────┐
+        │         |              |              |
+     Manager   Windows      Ubuntu Server      Kali
 
  Tools used:
- VirtualBox as the virtualization platform, the host machine is Arch linux
- Wazuh Manager for SIEM , collecting and analyzing security alerts, on Ubuntu Server
- Wazuh Agent , ships logs from Windows to Wazuh Manager, on Windows(Target)
+
+ 
+ VirtualBox as the virtualization platform,
+ 
+ the host machine is Arch linux
+ 
+ Wazuh Manager for SIEM , collecting and analyzing security alerts, on dokcer
+ 
+ Wazuh Agent - ships logs from Windows to Wazuh Manager, on Windows(Target)
+ 
  Sysmon , detailed Windows event logging also on the Windows
+ 
  Kali linux, the attack simulation on the Kali VM
+ 
  Nmap for Newtork reconnaissance on the Kali VM 
  
  Virtual Machines
@@ -64,21 +81,69 @@ Network Configuration
 
 All VMs communicate over a host-only network (vboxnet0) on the 192.168.56.0/24 subnet. Each VM also has a NAT adapter for internet access.
 
-Projects
+   Skills Obtained :
 
-   Project                                                Status
-1. Lab Setup & Configuration                             Complete
-2. Nmap Reconnaissance Detection                         In Progress
-3. Brute Force Attack Detection                          Pending
-4. Malware Detection with Sysmon                         Pending
-5. Incident Response Simulation                          Pending
    
-What i learned:
-1. How to configure and manade virtual machines
-2. How SIEM tools like Wazuh work
-3. How sysmon captures detailed Windows events
-4. How attackers perform nework recon
-5. How defenders detect and respond to threats
+ Windows Event Logging
 
-   Victoria | Cybersecurity Student | Nairobi, Kenya.
+ Sysmon
+
+ Wazuh SIEM
+
+ Docker
+
+ Linux Administration
+
+ VirtualBox Networking
+
+ Incident Response
+
+ Threat Detection
+
+ MITRE ATT&CK Mapping
+
+ SSH Analysis
+
+ Windows Authentication
+
+ Log Analysis
+
+ Network Enumeration
+
+ Metasploit
+
+ Nmap
+
+ 
+ Lessons Learnt :
+
+ Deploying Wazuh in Docker requires understanding Docker networking.
+ 
+Agent versions must match the manager version. 
+
+Disk space planning is important when running several virtual machines.
+
+VirtualBox Host-Only networking is critical for reliable communication.
+
+Debugging often takes longer than deployment.
+
+Documentation is just as important as implementation.
+
+Areas yet to learn:
+
+Active Directory
+
+Sysmon custom rules
+
+Sigma rules
+
+Splunk comparison
+
+Suricata IDS
+
+pfSense firewall
+
+Active Response
+
+Malware analysis VM
  
