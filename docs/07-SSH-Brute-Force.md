@@ -44,5 +44,5 @@ Defenders should implement fail2ban or rate limiting to block brute force automa
 
 
 
-As seen there have been some trouble in the Wazuh Agent:disk space and dependency crashes. How I fixed it by switching to Wazuh Docker as documented in [Project 02 - Wazuh Deployment](Project-02-Wazuh-Deployment.md).
+As seen there have been some trouble in the Wazuh Agent:disk space and dependency crashes. How I fixed it by switching to Wazuh Docker as documented in [Project 03-Wazuh Deployment](Project-03-Wazuh-Deployment.md).
 Having learnt about Virtualization last semester and having to see it in the real world is quite astonishing, Understanding the difference between a Virtual environment and a container, a Virtual environment like Oracle that can run full virtual machines like Windows but containers like Docker can only run individual applications and it cannot simulate the virtual hardware, only shares the hosts underlying operating system kernel.
