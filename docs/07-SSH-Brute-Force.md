@@ -68,7 +68,9 @@ Steps:
    <img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/cbb0127b-0e6e-4fd1-abbb-fb0d7a911de3" />
 
 
-5. Confirm Ubuntu logged  the failed attempt and permission denied
+5. Confirm Ubuntu logged  the failed attempt and permission denied via;
+
+   sudo tail -f /var/log/auth.log
 
    <img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/b28b97b8-df89-4ca5-b956-5964ccea1d93" />
 
