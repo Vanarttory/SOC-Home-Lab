@@ -75,6 +75,25 @@ Steps:
    <img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/b28b97b8-df89-4ca5-b956-5964ccea1d93" />
 
 
+6. Confirm Wazuh receives the logs:
+
+ Open Wazuh manager and check to see if the dashboard shows active agents; Kali and Ubuntu.
+ 
+ It does not. 
+ 
+I seem to have run into some problem, again a networking problem where the Host-Adapter IP Address seems to have shifted from 192.168.56.1 to 192.168.56.101 using the DHCP protocol which i have then disabled to prevent further problems in the future. I also, learnt that critical infrastructure should have a static IP.
+
+<img width="1366" height="736" alt="Screenshot From 2026-07-02 14-17-59" "src="https://github.com/user-attachments/assets/d7146267-8431-47c9-9dee-a90485e27bdd" />
+
+<img width="904" height="786" alt="Screenshot From 2026-07-02 15-02-17" src="https://github.com/user-attachments/assets/9e6960df-d804-493b-86ca-510584c340f5" />
+
+<img width="904" height="786" alt="Screenshot From 2026-07-02 15-02-28" src="https://github.com/user-attachments/assets/fa288944-0867-4a2f-ab1e-41ac989f1b33" />
+
+<img width="904" height="786" alt="image" src="https://github.com/user-attachments/assets/ced6406e-1c16-4ade-abcb-9f0eee067c5e" />
+
+
+
+
 
 
 
