@@ -46,3 +46,36 @@ Defenders should implement fail2ban or rate limiting to block brute force automa
 
 As seen there have been some trouble in the Wazuh Agent:disk space and dependency crashes. How I fixed it by switching to Wazuh Docker as documented in [03-Wazuh-Deployment](03-Wazuh-Deployment.md).
 Having learnt about Virtualization last semester and having to see it in the real world is quite astonishing, Understanding the difference between a Virtual environment and a container, a Virtual environment like Oracle that can run full virtual machines like Windows but containers like Docker can only run individual applications and it cannot simulate the virtual hardware, only shares the hosts underlying operating system kernel.
+
+
+After the little detour of fixing Wazuh, back to brute foricng:
+
+
+Steps:
+
+1. Check if Ubuntu has SSH present via:
+
+  sudo systemctl status ssh
+
+2. Verify the machines can communicate by  pinging Ubuntu from Kali via :
+
+   ping 0c 4 192.168.56.10
+
+3. Verify ssh manually via:
+   
+   ssh victoria@192.168.56.10
+
+   <img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/cbb0127b-0e6e-4fd1-abbb-fb0d7a911de3" />
+
+
+5. Confirm Ubuntu logged  the failed attempt and permission denied
+
+   <img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/b28b97b8-df89-4ca5-b956-5964ccea1d93" />
+
+
+
+
+
+
+ 
+
