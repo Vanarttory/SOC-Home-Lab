@@ -92,6 +92,27 @@ I seem to have run into some problem, again a networking problem where the Host-
 <img width="904" height="786" alt="image" src="https://github.com/user-attachments/assets/ced6406e-1c16-4ade-abcb-9f0eee067c5e" />
 
 
+Again i happened to experience some problems with Wazuh but imanaged to solved it with the :
+
+docker compose down command and 
+
+docker compose up -d command 
+
+and eventually we can see that everything worked out:
+
+
+
+<img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/97e77a31-bbb5-42d0-82d7-3f26f271aab5" />
+
+
+<img width="1366" height="736" alt="Screenshot From 2026-07-06 11-20-34" src="https://github.com/user-attachments/assets/078284fc-ff14-478f-9716-595963c564e6" />
+
+
+
+
+
+
+
 
 
 
