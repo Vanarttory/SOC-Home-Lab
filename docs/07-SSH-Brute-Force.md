@@ -107,6 +107,10 @@ and eventually we can see that everything worked out:
 
 <img width="1366" height="736" alt="Screenshot From 2026-07-06 11-20-34" src="https://github.com/user-attachments/assets/078284fc-ff14-478f-9716-595963c564e6" />
 
+<img width="1366" height="736" alt="image" src="https://github.com/user-attachments/assets/85273561-12ea-40a5-a168-3a70384844af" />
+
+
+<img width="1366" height="736" alt="Screenshot From 2026-07-06 11-55-40" src="https://github.com/user-attachments/assets/15463ab2-5e50-4d69-9997-fdabaa9f3b98" />
 
 
 
