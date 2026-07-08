@@ -69,6 +69,16 @@ Evidence:
 <img width="1366" height="736" alt="Screenshot From 2026-07-06 11-55-26" src="https://github.com/user-attachments/assets/ccbb4f31-a628-4fc8-89c2-619f391bfaec" />
 
 
+
+
+Timeline:
+
+
+
+
+
+
+
 Investigation:
 
 
@@ -135,4 +145,4 @@ The exercise reinformed the log-decoder-rule-alert pipeline and demonstrated pra
 
 Future iterations of this lab should incorporate automated reponse actions and expand detection coverage to related attack chains.
 
- 
+ Author's note: This report was prepared with the assistance of AI for structure and technical writing. All attack execution, inestigation, screenshots, validation and conclusions were performed and verified by me.
