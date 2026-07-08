@@ -1,0 +1,103 @@
+Objective:
+
+Investigate a suspicious email reported by a user to determine whether it is malicious, identify IOCs , map attacker techniques to MITRE ATT&CK and produce an incident report with remedition recommendations.
+
+  Scenario:
+
+  A finance employee reports receiving an email claiming that their Microsoft 365 password will expire unless they cick a link.
+  
+  The employee has not clicked anything yet because they found it suspicious. 
+  
+  They are unsure whether it is legitimate and forwards it to the SOC for investigation.
+
+  Steps:
+
+  
+  1. User reports suspicious email
+  
+  2. Collect the email (.eml)
+  
+  3. Analyze the headers
+
+  4. Check SPF (Pass), DKIM (Pass) and DMARC (Pass)
+
+  5. Inspect sender information
+
+  6. Extract URLS
+
+  7. Check the URL (Virus Total, URLScan, URL2PNG (captures a screenshot) and WHOIS lookup)
+
+  8. Analyze attachment (file extensions, filenames, hashes, VirusTotal reputation) 
+
+  9. Extract Indicators Of Compromise
+
+  10. MiTRE ATT&CK Mapping
+
+  11. Incident report
+
+This is the email (user view) 
+
+From: Microsoft Account Team <security@micr0soft-support.com>
+
+To: sarah@victoriacorp.local
+
+Subject: Immediate Action Required - Your Microsoft 365 Password Expires Today
+
+Date:
+Monday, July 6, 2026
+08:44
+
+Dear User,
+
+Your Microsoft 365 password will expire TODAY.
+
+Failure to verify your account within 60 minutes will result in permanent suspension of your mailbox.
+
+Please verify immediately using the secure portal below.
+
+Verify Account
+
+Thank you,
+
+Microsoft Security Team
+
+
+This is the email header (extract)
+
+Return-Path: <security@micr0soft-support.com>
+
+From: Microsoft Account Team <security@micr0soft-support.com>
+
+Reply-To: support@secure-login365.net
+
+Received: from mail.secure-login365.net
+(185.203.118.44)
+
+Authentication-Results:
+
+spf=fail
+
+dkim=none
+
+dmarc=fail
+
+Message-ID:
+<4829109348@secure-login365.net>
+
+
+This is the embedded URL: https://secure-login365.net/microsoft/verify.php
+
+The following are my observations:
+
+The Sender email is micr0soft instead of microsoft indicating typosquatting as an indicator of compromise
+
+SPF, DKIM and DMARC failed. 
+
+Use of urgency as a social engineering tool: 
+
+" Failure to verify within 60 minutes" and " Permanent suspension"
+
+The messag is addressed to " Dear User" not a username or a name that legitimate organizations use when communicating personalized messages.
+
+
+  
