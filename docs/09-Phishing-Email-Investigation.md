@@ -120,11 +120,17 @@ URL                                               https://micr0soft-support.com/
 
 Subject                                           Urgent: Verify Your Microsoft Account
 
+Reply-to Mismatch                                 From: security@micr0soft-support.com / Reply-To:support@secure-login365.net
+
 MITRE ATT&CK Mapping:
 
 T1566.002 - Phishing: SpearPhishing Link - The email persuades the user to click a malicious link
 
-T1583.001 - Acquire Infrastructure : Domains - The attacker regitred a microsoft looking domain
+T1583.001 - Acquire Infrastructure : Domains - The attacker registered a microsoft looking domain
+
+T1036 - Maquerading :   They pretended to be a trusted company, Microsoft
+
+T1204.001 – User Execution:  User must click link.
 
 Incident Report :
 
