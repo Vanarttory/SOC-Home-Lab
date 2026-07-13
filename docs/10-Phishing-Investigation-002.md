@@ -235,7 +235,7 @@ Financial transcation verification policy
 
 Lessons Learned:
 
-This investigation demonstrates that email authentication alone cannot determine legitimacy, they require correlation of social engineering, user bheaviour, business context and techincal indicators. 
+This investigation demonstrates that email authentication alone cannot determine legitimacy.
 
 Analysts must correlate technical indicators with behavioral characteristics, social engineering indicators and business context before reaching a conclusion.
 
