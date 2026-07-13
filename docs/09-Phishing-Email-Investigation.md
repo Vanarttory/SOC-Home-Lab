@@ -19,15 +19,15 @@ Investigate a suspicious email reported by a user to determine whether it is mal
   
   3. Analyze the headers
 
-  4. Check SPF (Pass), DKIM (Pass) and DMARC (Pass)
+  4. Check if the SPF,DKIM and DMARC are all passes
 
   5. Inspect sender information
 
   6. Extract URLS
 
-  7. Check the URL (Virus Total, URLScan, URL2PNG (captures a screenshot) and WHOIS lookup)
+  7. Check the URL using Virus Total, URLScan, URL2PNG (captures a screenshot) and WHOIS lookup
 
-  8. Analyze attachment (file extensions, filenames, hashes, VirusTotal reputation) 
+  8. Analyze attachment via file extensions, filenames, hashes, VirusTotal reputation) 
 
   9. Extract Indicators Of Compromise
 
@@ -106,7 +106,7 @@ IOCs:
 
 Indicator type                                                       Indicator
 
-Sender Email                                      support@micr0soft-support.com
+Sender Email                                      security@micr0soft-support.com
 
 Sender Domain                                     micr0soft-support.com
 
@@ -126,7 +126,7 @@ T1566.002 - Phishing: SpearPhishing Link - The email persuades the user to click
 
 T1583.001 - Acquire Infrastructure : Domains - The attacker regitred a microsoft looking domain
 
-Incident Report:
+Incident Report :
 
 Incident Type: Phishing Email Investigation
 
