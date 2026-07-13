@@ -198,6 +198,8 @@ Findings:
 | Sender   | [m.roberts@contoso.com](mailto:m.roberts@contoso.com)                 |
 | Reply-To | [payments.consulting@gmail.com](mailto:payments.consulting@gmail.com) |
 | Subject  | URGENT – Vendor Payment Required Today                                |
+| Authority| CEO  impersonation                                                    |
+| Isolation| The CEO will not be available through the phone,prevents verification |
 
 MITRE ATT&CK:
 
@@ -205,6 +207,8 @@ MITRE ATT&CK:
 | --------------------- | ------------------------------------------------------------ |
 | T1656 – Impersonation | CEO identity abused to gain employee trust                   |
 | T1566 – Phishing      | Social engineering through email requesting financial action |
+| T1036 – Masquerading  | Abusing executive identity                                   |
+
 
 Risk Assesment:
 
@@ -225,10 +229,15 @@ Provide user awareness training regarding BEC.
 
 Implement mail flow rules to identify external Reply-To mismatches.
 
+Approval for workflow payments 
+
+Financial transcation verification policy
+
 Lessons Learned:
 
-This investigation demonstrates that email authentication alone cannot determine legitimacy. 
-Analysts must correlate technical indicators with behavioral characteristics and business context before reaching a conclusion.
+This investigation demonstrates that email authentication alone cannot determine legitimacy, they require correlation of social engineering, user bheaviour, business context and techincal indicators. 
+
+Analysts must correlate technical indicators with behavioral characteristics, social engineering indicators and business context before reaching a conclusion.
 
 
 
